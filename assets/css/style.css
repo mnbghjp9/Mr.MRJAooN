@@ -282,50 +282,83 @@ body {
     opacity: 0.8;
 }
 
-/* تطبيق الإطار الناري على روابط التواصل */
+/* تحديث روابط التواصل الاجتماعي */
 .social-links {
     position: fixed;
-    bottom: 70px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: -40px; /* نبدأ من خارج الشاشة */
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
     z-index: 1001;
+    background: transparent;
+    padding: 0.5rem;
+    border-radius: 0 25px 25px 0;
+    transition: all 0.3s ease;
+}
+
+.social-links:hover {
+    left: 0; /* نظهر عند hover */
     background: rgba(44, 62, 80, 0.9);
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    backdrop-filter: blur(10px);
 }
 
 .social-link {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    text-decoration: none;
+    color: var(--light-color);
+    font-size: 1.2rem;
+    border-radius: 50%;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.social-link i {
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--glow-color), transparent);
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 
-.social-link:hover i {
-    transform: scale(1.2);
+.social-link:hover {
+    transform: translateX(5px);
+    color: #fff;
 }
 
-.social-link.whatsapp { background: #25D366; }
-.social-link.telegram { background: #0088cc; }
-.social-link.facebook { background: #1877f2; }
-.social-link.youtube { background: #ff0000; }
-.social-link.instagram { background: #C13584; }
-.social-link.blogger { background: #FF5722; }
+.social-link:hover::before {
+    opacity: 0.5;
+}
+
+/* تخصيص ألوان مختلفة لكل أيقونة */
+.social-link.whatsapp:hover { background: #25D366; }
+.social-link.instagram:hover { background: #E4405F; }
+.social-link.youtube:hover { background: #FF0000; }
+.social-link.facebook:hover { background: #1877F2; }
+.social-link.twitter:hover { background: #1DA1F2; }
+.social-link.github:hover { background: #333; }
+
+/* تحسين التجاوب */
+@media (max-width: 768px) {
+    .social-links {
+        left: -35px;
+    }
+
+    .social-link {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
 
 /* النيازك الصغيرة */
 .small-meteors {
