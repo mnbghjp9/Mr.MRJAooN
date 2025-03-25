@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بي | Mr.MRJAooN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="meteors"></div>
+
+    <!-- Language Switcher -->
+    <button id="lang-toggle" class="lang-btn" onclick="toggleLanguage()">
+        <i class="fas fa-globe"></i>
+        <span>English</span>
+    </button>
+
+    <!-- زر الموسيقى -->
+    <button id="music-toggle" class="music-btn">
+        <i class="fas fa-music"></i>
+    </button>
+    <audio id="background-music" loop>
+        <source src="assets/audio/background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- القائمة الرئيسية -->
+    <nav class="main-nav" data-aos="fade">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html" class="nav-link"><span class="ar">الرئيسية</span><span class="en" style="display: none;">Home</span></a></li>
+                <li><a href="projects.html" class="nav-link"><span class="ar">المشاريع</span><span class="en" style="display: none;">Projects</span></a></li>
+                <li><a href="articles.html" class="nav-link"><span class="ar">المقالات</span><span class="en" style="display: none;">Articles</span></a></li>
+                <li><a href="videos.html" class="nav-link"><span class="ar">الفيديوهات</span><span class="en" style="display: none;">Videos</span></a></li>
+                <li><a href="contact.html" class="nav-link active"><span class="ar">اتصل بي</span><span class="en" style="display: none;">Contact</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- محتوى صفحة الاتصال -->
+    <main class="contact-content">
+        <div class="contact-header" data-aos="fade-down">
+            <h1 class="ar">تواصل معي</h1>
+            <h1 class="en" style="display: none;">Contact Me</h1>
+            <p class="ar">يسعدني تواصلكم معي في أي وقت</p>
+            <p class="en" style="display: none;">I'm happy to hear from you anytime</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- معلومات الاتصال -->
+            <div class="contact-info" data-aos="fade-right">
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3 class="ar">البريد الإلكتروني</h3>
+                    <h3 class="en" style="display: none;">Email</h3>
+                    <p>contact@mrmarjani.com</p>
+                </div>
+                <div class="info-card">
+                    <i class="fab fa-telegram"></i>
+                    <h3 class="ar">تيليجرام</h3>
+                    <h3 class="en" style="display: none;">Telegram</h3>
+                    <p>@MrMarjani</p>
+                </div>
+                <div class="info-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3 class="ar">واتساب</h3>
+                    <h3 class="en" style="display: none;">WhatsApp</h3>
+                    <p>+1234567890</p>
+                </div>
+            </div>
+
+            <!-- نموذج الاتصال -->
+            <form class="contact-form" data-aos="fade-left">
+                <div class="form-group">
+                    <label class="ar">الاسم</label>
+                    <label class="en" style="display: none;">Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label class="ar">البريد الإلكتروني</label>
+                    <label class="en" style="display: none;">Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="ar">الموضوع</label>
+                    <label class="en" style="display: none;">Subject</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label class="ar">الرسالة</label>
+                    <label class="en" style="display: none;">Message</label>
+                    <textarea rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span class="ar">إرسال الرسالة</span>
+                    <span class="en" style="display: none;">Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- خريطة الموقع -->
+        <div class="map-container" data-aos="fade-up">
+            <div class="map-overlay">
+                <h3 class="ar">موقعي</h3>
+                <h3 class="en" style="display: none;">My Location</h3>
+                <p class="ar">العراق - بغداد</p>
+                <p class="en" style="display: none;">Baghdad, Iraq</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23456.789!2d44.3661!3d33.3152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDE4JzU0LjciTiA0NMKwMjEnNTguMCJF!5e0!3m2!1sen!2siq!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+</html>

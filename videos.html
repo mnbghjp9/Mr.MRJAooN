@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفيديوهات | Mr.MRJAooN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/videos.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="meteors"></div>
+
+    <!-- Language Switcher -->
+    <button id="lang-toggle" class="lang-btn" onclick="toggleLanguage()">
+        <i class="fas fa-globe"></i>
+        <span>English</span>
+    </button>
+
+    <!-- زر الموسيقى -->
+    <button id="music-toggle" class="music-btn">
+        <i class="fas fa-music"></i>
+    </button>
+    <audio id="background-music" loop>
+        <source src="assets/audio/background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- القائمة الرئيسية -->
+    <nav class="main-nav" data-aos="fade">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html" class="nav-link"><span class="ar">الرئيسية</span><span class="en" style="display: none;">Home</span></a></li>
+                <li><a href="projects.html" class="nav-link"><span class="ar">المشاريع</span><span class="en" style="display: none;">Projects</span></a></li>
+                <li><a href="articles.html" class="nav-link"><span class="ar">المقالات</span><span class="en" style="display: none;">Articles</span></a></li>
+                <li><a href="videos.html" class="nav-link active"><span class="ar">الفيديوهات</span><span class="en" style="display: none;">Videos</span></a></li>
+                <li><a href="contact.html" class="nav-link"><span class="ar">اتصل بي</span><span class="en" style="display: none;">Contact</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- محتوى الفيديوهات -->
+    <main class="videos-content">
+        <div class="videos-header" data-aos="fade-down">
+            <h1 class="ar">الفيديوهات التعليمية</h1>
+            <h1 class="en" style="display: none;">Tutorial Videos</h1>
+        </div>
+
+        <div class="videos-filters" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">
+                <span class="ar">الكل</span>
+                <span class="en" style="display: none;">All</span>
+            </button>
+            <button class="filter-btn" data-filter="tutorials">
+                <span class="ar">دروس تعليمية</span>
+                <span class="en" style="display: none;">Tutorials</span>
+            </button>
+            <button class="filter-btn" data-filter="projects">
+                <span class="ar">مشاريع عملية</span>
+                <span class="en" style="display: none;">Projects</span>
+            </button>
+            <button class="filter-btn" data-filter="tips">
+                <span class="ar">نصائح وحيل</span>
+                <span class="en" style="display: none;">Tips & Tricks</span>
+            </button>
+        </div>
+
+        <div class="videos-grid">
+            <!-- فيديو 1 -->
+            <div class="video-card" data-category="tutorials" data-aos="fade-up">
+                <div class="video-thumbnail">
+                    <img src="assets/images/videos/python-course.jpg" alt="Python Course">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <span class="video-duration">15:30</span>
+                </div>
+                <div class="video-content">
+                    <h2 class="ar">دورة Python للمبتدئين - الدرس الأول</h2>
+                    <h2 class="en" style="display: none;">Python Course for Beginners - Lesson 1</h2>
+                    <p class="ar">تعلم أساسيات لغة Python من الصفر</p>
+                    <p class="en" style="display: none;">Learn Python basics from scratch</p>
+                    <div class="video-meta">
+                        <span><i class="far fa-eye"></i> 1.2K مشاهدة</span>
+                        <span><i class="far fa-calendar"></i> 2025-03-20</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- فيديو 2 -->
+            <div class="video-card" data-category="projects" data-aos="fade-up" data-aos-delay="100">
+                <div class="video-thumbnail">
+                    <img src="assets/images/videos/web-project.jpg" alt="Web Project">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <span class="video-duration">20:45</span>
+                </div>
+                <div class="video-content">
+                    <h2 class="ar">بناء موقع ويب تفاعلي</h2>
+                    <h2 class="en" style="display: none;">Building an Interactive Website</h2>
+                    <p class="ar">خطوة بخطوة لبناء موقع ويب حديث</p>
+                    <p class="en" style="display: none;">Step by step guide to build a modern website</p>
+                    <div class="video-meta">
+                        <span><i class="far fa-eye"></i> 2.5K مشاهدة</span>
+                        <span><i class="far fa-calendar"></i> 2025-03-18</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- فيديو 3 -->
+            <div class="video-card" data-category="tips" data-aos="fade-up" data-aos-delay="200">
+                <div class="video-thumbnail">
+                    <img src="assets/images/videos/coding-tips.jpg" alt="Coding Tips">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <span class="video-duration">10:15</span>
+                </div>
+                <div class="video-content">
+                    <h2 class="ar">نصائح لتحسين كفاءة الكود</h2>
+                    <h2 class="en" style="display: none;">Tips for Code Optimization</h2>
+                    <p class="ar">أفضل الممارسات لكتابة كود أفضل</p>
+                    <p class="en" style="display: none;">Best practices for writing better code</p>
+                    <div class="video-meta">
+                        <span><i class="far fa-eye"></i> 1.8K مشاهدة</span>
+                        <span><i class="far fa-calendar"></i> 2025-03-15</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/videos.js"></script>
+</body>
+</html>

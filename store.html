@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المتجر - Mr.MRJAooN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/store.css">
+</head>
+<body>
+    <!-- خلفية الجزيئات -->
+    <div id="particles-js"></div>
+
+    <!-- النيازك -->
+    <div class="meteors"></div>
+    <div class="small-meteors"></div>
+
+    <!-- العنوان الرئيسي -->
+    <header class="main-header">
+        <h1 class="site-title main-title heartbeat">
+            <span class="ar">Mr.MRJAooN</span>
+            <span class="en" style="display: none;">Mr.MRJAooN</span>
+        </h1>
+        <h2 class="site-title sub-title">
+            <span class="ar">المرجاني</span>
+            <span class="en" style="display: none;">Al-Marjani</span>
+        </h2>
+    </header>
+
+    <!-- Language Switcher -->
+    <button id="lang-toggle" class="lang-btn" onclick="toggleLanguage()">
+        <i class="fas fa-globe"></i>
+        <span>English</span>
+    </button>
+
+    <!-- زر الموسيقى -->
+    <button id="music-toggle" class="music-btn">
+        <i class="fas fa-music"></i>
+    </button>
+    <audio id="background-music" loop>
+        <source src="assets/audio/background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- القائمة الرئيسية -->
+    <nav class="main-nav" data-aos="fade">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i><span class="ar">الرئيسية</span><span class="en" style="display: none;">Home</span></a></li>
+                <li><a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i><span class="ar">المشاريع</span><span class="en" style="display: none;">Projects</span></a></li>
+                <li><a href="articles.html" class="nav-link"><i class="fas fa-newspaper"></i><span class="ar">المقالات</span><span class="en" style="display: none;">Articles</span></a></li>
+                <li><a href="videos.html" class="nav-link"><i class="fas fa-video"></i><span class="ar">الفيديوهات</span><span class="en" style="display: none;">Videos</span></a></li>
+                <li><a href="store.html" class="nav-link active"><i class="fas fa-store"></i><span class="ar">المتجر</span><span class="en" style="display: none;">Store</span></a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i><span class="ar">اتصل بي</span><span class="en" style="display: none;">Contact</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- قسم المتجر -->
+    <section class="store-section">
+        <div class="store-container">
+            <div class="store-header">
+                <div class="store-search">
+                    <input type="text" placeholder="ابحث عن منتج..." class="search-input ar">
+                    <input type="text" placeholder="Search products..." class="search-input en" style="display: none;">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="store-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        <span class="ar">الكل</span>
+                        <span class="en" style="display: none;">All</span>
+                    </button>
+                    <button class="filter-btn" data-filter="new">
+                        <span class="ar">جديد</span>
+                        <span class="en" style="display: none;">New</span>
+                    </button>
+                    <button class="filter-btn" data-filter="used">
+                        <span class="ar">مستعمل</span>
+                        <span class="en" style="display: none;">Used</span>
+                    </button>
+                    <select class="sort-select">
+                        <option value="default">
+                            <span class="ar">الترتيب الافتراضي</span>
+                            <span class="en" style="display: none;">Default sorting</span>
+                        </option>
+                        <option value="price-asc">
+                            <span class="ar">السعر: من الأقل للأعلى</span>
+                            <span class="en" style="display: none;">Price: Low to High</span>
+                        </option>
+                        <option value="price-desc">
+                            <span class="ar">السعر: من الأعلى للأقل</span>
+                            <span class="en" style="display: none;">Price: High to Low</span>
+                        </option>
+                        <option value="name-asc">
+                            <span class="ar">الاسم: أ-ي</span>
+                            <span class="en" style="display: none;">Name: A-Z</span>
+                        </option>
+                        <option value="name-desc">
+                            <span class="ar">الاسم: ي-أ</span>
+                            <span class="en" style="display: none;">Name: Z-A</span>
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <!-- سيتم إضافة المنتجات هنا عن طريق JavaScript -->
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn prev">
+                    <i class="fas fa-chevron-right ar"></i>
+                    <i class="fas fa-chevron-left en" style="display: none;"></i>
+                </button>
+                <div class="page-numbers">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                </div>
+                <button class="page-btn next">
+                    <i class="fas fa-chevron-left ar"></i>
+                    <i class="fas fa-chevron-right en" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- روابط التواصل الاجتماعي -->
+    <div class="social-links">
+        <a href="#" class="social-link whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="social-link telegram" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="#" class="social-link facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-link youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link blogger" target="_blank"><i class="fab fa-blogger"></i></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/store.js"></script>
+</body>
+</html>

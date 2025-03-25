@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المقالات | Mr.MRJAooN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/articles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="meteors"></div>
+
+    <!-- Language Switcher -->
+    <button id="lang-toggle" class="lang-btn" onclick="toggleLanguage()">
+        <i class="fas fa-globe"></i>
+        <span>English</span>
+    </button>
+
+    <!-- زر الموسيقى -->
+    <button id="music-toggle" class="music-btn">
+        <i class="fas fa-music"></i>
+    </button>
+    <audio id="background-music" loop>
+        <source src="assets/audio/background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- القائمة الرئيسية -->
+    <nav class="main-nav" data-aos="fade">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html" class="nav-link"><span class="ar">الرئيسية</span><span class="en" style="display: none;">Home</span></a></li>
+                <li><a href="projects.html" class="nav-link"><span class="ar">المشاريع</span><span class="en" style="display: none;">Projects</span></a></li>
+                <li><a href="articles.html" class="nav-link active"><span class="ar">المقالات</span><span class="en" style="display: none;">Articles</span></a></li>
+                <li><a href="videos.html" class="nav-link"><span class="ar">الفيديوهات</span><span class="en" style="display: none;">Videos</span></a></li>
+                <li><a href="contact.html" class="nav-link"><span class="ar">اتصل بي</span><span class="en" style="display: none;">Contact</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- محتوى المقالات -->
+    <main class="articles-content">
+        <div class="articles-header" data-aos="fade-down">
+            <h1 class="ar">المقالات التقنية</h1>
+            <h1 class="en" style="display: none;">Technical Articles</h1>
+        </div>
+
+        <div class="articles-filters" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">
+                <span class="ar">الكل</span>
+                <span class="en" style="display: none;">All</span>
+            </button>
+            <button class="filter-btn" data-filter="programming">
+                <span class="ar">البرمجة</span>
+                <span class="en" style="display: none;">Programming</span>
+            </button>
+            <button class="filter-btn" data-filter="security">
+                <span class="ar">الأمن السيبراني</span>
+                <span class="en" style="display: none;">Cybersecurity</span>
+            </button>
+            <button class="filter-btn" data-filter="ai">
+                <span class="ar">الذكاء الاصطناعي</span>
+                <span class="en" style="display: none;">AI</span>
+            </button>
+        </div>
+
+        <div class="articles-grid">
+            <!-- مقال 1 -->
+            <article class="article-card" data-category="programming" data-aos="fade-up">
+                <div class="article-image">
+                    <img src="assets/images/articles/python-tips.jpg" alt="Python Tips">
+                </div>
+                <div class="article-content">
+                    <h2 class="ar">أفضل ممارسات Python للمطورين</h2>
+                    <h2 class="en" style="display: none;">Python Best Practices</h2>
+                    <p class="ar">تعلم أفضل الممارسات في برمجة Python وكيفية كتابة كود نظيف وفعال.</p>
+                    <p class="en" style="display: none;">Learn Python best practices and how to write clean, efficient code.</p>
+                    <div class="article-meta">
+                        <span><i class="far fa-clock"></i> 10 دقائق للقراءة</span>
+                        <span><i class="far fa-calendar"></i> 2025-03-20</span>
+                    </div>
+                    <a href="#" class="read-more">
+                        <span class="ar">اقرأ المزيد</span>
+                        <span class="en" style="display: none;">Read More</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- مقال 2 -->
+            <article class="article-card" data-category="security" data-aos="fade-up" data-aos-delay="100">
+                <div class="article-image">
+                    <img src="assets/images/articles/cyber-security.jpg" alt="Cyber Security">
+                </div>
+                <div class="article-content">
+                    <h2 class="ar">حماية تطبيقات الويب من الهجمات</h2>
+                    <h2 class="en" style="display: none;">Securing Web Applications</h2>
+                    <p class="ar">دليل شامل لحماية تطبيقات الويب من الثغرات الأمنية الشائعة.</p>
+                    <p class="en" style="display: none;">A comprehensive guide to protecting web applications from common vulnerabilities.</p>
+                    <div class="article-meta">
+                        <span><i class="far fa-clock"></i> 15 دقائق للقراءة</span>
+                        <span><i class="far fa-calendar"></i> 2025-03-18</span>
+                    </div>
+                    <a href="#" class="read-more">
+                        <span class="ar">اقرأ المزيد</span>
+                        <span class="en" style="display: none;">Read More</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- مقال 3 -->
+            <article class="article-card" data-category="ai" data-aos="fade-up" data-aos-delay="200">
+                <div class="article-image">
+                    <img src="assets/images/articles/ai-future.jpg" alt="AI Future">
+                </div>
+                <div class="article-content">
+                    <h2 class="ar">مستقبل الذكاء الاصطناعي</h2>
+                    <h2 class="en" style="display: none;">The Future of AI</h2>
+                    <p class="ar">نظرة عميقة على مستقبل الذكاء الاصطناعي وتأثيره على حياتنا.</p>
+                    <p class="en" style="display: none;">A deep look into the future of AI and its impact on our lives.</p>
+                    <div class="article-meta">
+                        <span><i class="far fa-clock"></i> 12 دقائق للقراءة</span>
+                        <span><i class="far fa-calendar"></i> 2025-03-15</span>
+                    </div>
+                    <a href="#" class="read-more">
+                        <span class="ar">اقرأ المزيد</span>
+                        <span class="en" style="display: none;">Read More</span>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/articles.js"></script>
+</body>
+</html>

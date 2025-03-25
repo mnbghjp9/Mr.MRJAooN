@@ -1,0 +1,162 @@
+/* قسم المتجر */
+.store-section {
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.store-header {
+    margin-bottom: 2rem;
+}
+
+.store-search {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--light-color);
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.search-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 78, 80, 0.4);
+}
+
+.store-filters {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--light-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 78, 80, 0.4);
+}
+
+.sort-select {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--light-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 3rem;
+}
+
+.sort-select:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.page-btn:hover,
+.page-btn.active {
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 78, 80, 0.4);
+}
+
+.prev,
+.next {
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+}
+
+/* تحسين التجاوب */
+@media (max-width: 768px) {
+    .store-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sort-select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .store-search {
+        flex-direction: column;
+    }
+
+    .search-btn {
+        width: 100%;
+        border-radius: 25px;
+    }
+
+    .pagination {
+        flex-direction: column;
+    }
+}

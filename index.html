@@ -7,105 +7,350 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div id="particles-js"></div>
+    <div class="meteors"></div>
+    <div class="small-meteors"></div>
+
+    <!-- العنوان الرئيسي -->
+    <header class="main-header">
+        <h1 class="site-title main-title heartbeat">
+            <span class="ar">Mr.MRJAooN</span>
+            <span class="en" style="display: none;">Mr.MRJAooN</span>
+        </h1>
+        <h2 class="site-title sub-title">
+            <span class="ar">المرجاني</span>
+            <span class="en" style="display: none;">Al-Marjani</span>
+        </h2>
+    </header>
+
+    <!-- Language Switcher -->
+    <button id="lang-toggle" class="lang-btn" onclick="toggleLanguage()">
+        <i class="fas fa-globe"></i>
+        <span>English</span>
+    </button>
 
     <!-- زر الموسيقى -->
     <button id="music-toggle" class="music-btn">
         <i class="fas fa-music"></i>
     </button>
     <audio id="background-music" loop>
-        <source src="background-music.mp3" type="audio/mpeg">
+        <source src="assets/audio/background-music.mp3" type="audio/mpeg">
     </audio>
-
-    <!-- الهيدر -->
-    <header data-aos="fade-down">
-        <div class="header-content">
-            <h1>Mr.MRJAooN</h1>
-            <div class="subtitle">المــــــــــــــــــــــــــــــــــرجــــــــــــــــــــــــــــاني</div>
-            <p class="profession">خبير برمجيات وأمن سيبراني</p>
-        </div>
-    </header>
 
     <!-- القائمة الرئيسية -->
     <nav class="main-nav" data-aos="fade">
         <div class="nav-container">
             <ul>
-                <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
-                <li><a href="projects.html" class="nav-link">المشاريع</a></li>
-                <li><a href="articles.html" class="nav-link">المقالات</a></li>
-                <li><a href="videos.html" class="nav-link">الفيديوهات</a></li>
-                <li><a href="contact.html" class="nav-link">اتصل بي</a></li>
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i><span class="ar">الرئيسية</span><span class="en" style="display: none;">Home</span></a></li>
+                <li><a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i><span class="ar">المشاريع</span><span class="en" style="display: none;">Projects</span></a></li>
+                <li><a href="articles.html" class="nav-link"><i class="fas fa-newspaper"></i><span class="ar">المقالات</span><span class="en" style="display: none;">Articles</span></a></li>
+                <li><a href="videos.html" class="nav-link"><i class="fas fa-video"></i><span class="ar">الفيديوهات</span><span class="en" style="display: none;">Videos</span></a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i><span class="ar">اتصل بي</span><span class="en" style="display: none;">Contact</span></a></li>
             </ul>
         </div>
     </nav>
 
     <!-- الأقسام الرئيسية -->
-    <main class="main-content">
-        <div class="categories-section" data-aos="fade-up">
-            <h2 class="section-title">الأقسام الرئيسية</h2>
-            <div class="categories-grid">
-                <a href="computer-programs.html" class="category-card" data-aos="zoom-in">
-                    <i class="fas fa-desktop"></i>
-                    <h3>برامج الحاسوب</h3>
-                    <p>برامج وتطبيقات مميزة</p>
+    <section class="categories-section">
+        <h2 class="section-title" data-aos="fade-down">
+            <span class="ar">الأقسام</span>
+            <span class="en" style="display: none;">Categories</span>
+        </h2>
+        
+        <div class="categories-container">
+            <!-- الصف الأول -->
+            <div class="categories-row" data-aos="fade-up">
+                <a href="#games" class="category-card">
+                    <div class="card-content">
+                        <i class="fas fa-gamepad"></i>
+                        <h3><span class="ar">الألعاب</span><span class="en" style="display: none;">Games</span></h3>
+                        <p class="ar">استمتع بألعاب مميزة</p>
+                        <p class="en" style="display: none;">Enjoy unique games</p>
+                    </div>
                 </a>
-                <a href="mobile-apps.html" class="category-card" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>تطبيقات الجوال</h3>
-                    <p>تطبيقات للأندرويد و iOS</p>
+
+                <a href="#programming" class="category-card">
+                    <div class="card-content">
+                        <i class="fas fa-code"></i>
+                        <h3><span class="ar">البرمجة</span><span class="en" style="display: none;">Programming</span></h3>
+                        <p class="ar">تعلم أحدث لغات البرمجة</p>
+                        <p class="en" style="display: none;">Learn latest programming languages</p>
+                    </div>
                 </a>
-                <a href="education.html" class="category-card" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>التعليم</h3>
-                    <p>دورات ودروس تعليمية</p>
+
+                <a href="#education" class="category-card">
+                    <div class="card-content">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3><span class="ar">التعليم</span><span class="en" style="display: none;">Education</span></h3>
+                        <p class="ar">دورات ودروس تعليمية</p>
+                        <p class="en" style="display: none;">Educational courses and lessons</p>
+                    </div>
                 </a>
-                <a href="tips.html" class="category-card" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>نصائح وحلول</h3>
-                    <p>نصائح تقنية وحلول برمجية</p>
+            </div>
+
+            <!-- الصف الثاني -->
+            <div class="categories-row" data-aos="fade-up" data-aos-delay="200">
+                <a href="#animation" class="category-card">
+                    <div class="card-content">
+                        <i class="fas fa-film"></i>
+                        <h3><span class="ar">الرسوم المتحركة</span><span class="en" style="display: none;">Animation</span></h3>
+                        <p class="ar">استكشف عالم الرسوم المتحركة</p>
+                        <p class="en" style="display: none;">Explore the world of animation</p>
+                    </div>
                 </a>
-                <a href="animations.html" class="category-card" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fas fa-film"></i>
-                    <h3>الرسوم المتحركة</h3>
-                    <p>تصاميم وأنيميشن</p>
+
+                <a href="#ai" class="category-card">
+                    <div class="card-content">
+                        <i class="fas fa-robot"></i>
+                        <h3><span class="ar">الذكاء الاصطناعي</span><span class="en" style="display: none;">AI</span></h3>
+                        <p class="ar">اكتشف تقنيات الذكاء الاصطناعي</p>
+                        <p class="en" style="display: none;">Discover AI technologies</p>
+                    </div>
                 </a>
-                <a href="ai.html" class="category-card" data-aos="zoom-in" data-aos-delay="500">
-                    <i class="fas fa-robot"></i>
-                    <h3>الذكاء الاصطناعي</h3>
-                    <p>مشاريع وتطبيقات ذكية</p>
+
+                <a href="#tips" class="category-card">
+                    <div class="card-content">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3><span class="ar">نصائح وحلول</span><span class="en" style="display: none;">Tips & Solutions</span></h3>
+                        <p class="ar">نصائح تقنية وحلول برمجية</p>
+                        <p class="en" style="display: none;">Technical tips and programming solutions</p>
+                    </div>
                 </a>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- قسم المتجر المصغر -->
+    <section class="mini-store-section">
+        <h2 class="section-title" data-aos="fade-down">
+            <span class="ar">المتجر</span>
+            <span class="en" style="display: none;">Store</span>
+        </h2>
+        
+        <div class="store-container" data-aos="fade-up">
+            <div class="store-header">
+                <h3 class="store-subtitle">
+                    <span class="ar">منتجات مميزة</span>
+                    <span class="en" style="display: none;">Featured Products</span>
+                </h3>
+                <a href="store.html" class="view-all-btn">
+                    <span class="ar">عرض كل المنتجات</span>
+                    <span class="en" style="display: none;">View All Products</span>
+                    <i class="fas fa-arrow-left ar"></i>
+                    <i class="fas fa-arrow-right en" style="display: none;"></i>
+                </a>
+            </div>
+
+            <div class="products-grid">
+                <!-- الصف الأول -->
+                <div class="product-row">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-image">
+                            <img src="assets/images/products/product1.jpg" alt="Product 1">
+                            <div class="product-overlay">
+                                <span class="price">$99</span>
+                                <button class="quick-view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>كاميرا احترافية</h4>
+                            <p>كاميرا رقمية عالية الدقة</p>
+                            <div class="product-meta">
+                                <span class="condition new">جديد</span>
+                                <span class="stock">متوفر</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-image">
+                            <img src="assets/images/products/product2.jpg" alt="Product 2">
+                            <div class="product-overlay">
+                                <span class="price">$49</span>
+                                <button class="quick-view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>سماعات لاسلكية</h4>
+                            <p>سماعات بلوتوث مع إلغاء الضوضاء</p>
+                            <div class="product-meta">
+                                <span class="condition new">جديد</span>
+                                <span class="stock">متوفر</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product-image">
+                            <img src="assets/images/products/product3.jpg" alt="Product 3">
+                            <div class="product-overlay">
+                                <span class="price">$199</span>
+                                <button class="quick-view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>لابتوب مستعمل</h4>
+                            <p>لابتوب بحالة ممتازة</p>
+                            <div class="product-meta">
+                                <span class="condition used">مستعمل</span>
+                                <span class="stock">متوفر</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="product-image">
+                            <img src="assets/images/products/product4.jpg" alt="Product 4">
+                            <div class="product-overlay">
+                                <span class="price">$29</span>
+                                <button class="quick-view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>ماوس قيمنق</h4>
+                            <p>ماوس احترافي للألعاب</p>
+                            <div class="product-meta">
+                                <span class="condition new">جديد</span>
+                                <span class="stock low">كمية محدودة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الصف الثاني -->
+                <div class="product-row">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="product-image">
+                            <img src="assets/images/products/product5.jpg" alt="Product 5">
+                            <div class="product-overlay">
+                                <span class="price">$149</span>
+                                <button class="quick-view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>شاشة كمبيوتر</h4>
+                            <p>شاشة LED عالية الدقة</p>
+                            <div class="product-meta">
+                                <span class="condition new">جديد</span>
+                                <span class="stock">متوفر</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="product-image">
+                            <img src="assets/images/products/product6.jpg" alt="Product 6">
+                            <div class="product-overlay">
+                                <span class="price">$79</span>
+                                <button class="quick-view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>لوحة مفاتيح ميكانيكية</h4>
+                            <p>لوحة مفاتيح للمحترفين</p>
+                            <div class="product-meta">
+                                <span class="condition used">مستعمل</span>
+                                <span class="stock">متوفر</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="700">
+                        <div class="product-image">
+                            <img src="assets/images/products/product7.jpg" alt="Product 7">
+                            <div class="product-overlay">
+                                <span class="price">$299</span>
+                                <button class="quick-view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>كونسول ألعاب</h4>
+                            <p>PlayStation 5 مستعمل</p>
+                            <div class="product-meta">
+                                <span class="condition used">مستعمل</span>
+                                <span class="stock low">كمية محدودة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="800">
+                        <div class="product-image">
+                            <img src="assets/images/products/product8.jpg" alt="Product 8">
+                            <div class="product-overlay">
+                                <span class="price">$159</span>
+                                <button class="quick-view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>طابعة ليزر</h4>
+                            <p>طابعة HP ليزر ملونة</p>
+                            <div class="product-meta">
+                                <span class="condition new">جديد</span>
+                                <span class="stock">متوفر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- شخصية مرجان -->
+    <div class="marjan-character">
+        <div class="magic-lamp">
+            <img src="assets/images/marjan/lamp.png" alt="Magic Lamp">
+            <div class="lamp-glow"></div>
+        </div>
+        <div class="marjan">
+            <img src="assets/images/marjan/marjan.png" alt="Marjan">
+        </div>
+    </div>
 
     <!-- روابط التواصل الاجتماعي -->
     <div class="social-links">
-        <a href="https://wa.me/YOUR_NUMBER" class="social-link whatsapp" target="_blank" data-aos="fade-left" data-aos-delay="100">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://t.me/YOUR_USERNAME" class="social-link telegram" target="_blank" data-aos="fade-left" data-aos-delay="200">
-            <i class="fab fa-telegram"></i>
-        </a>
-        <a href="https://facebook.com/YOUR_USERNAME" class="social-link facebook" target="_blank" data-aos="fade-left" data-aos-delay="300">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://youtube.com/@YOUR_CHANNEL" class="social-link youtube" target="_blank" data-aos="fade-left" data-aos-delay="400">
-            <i class="fab fa-youtube"></i>
-        </a>
+        <a href="#" class="social-link whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="social-link instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link github" target="_blank"><i class="fab fa-github"></i></a>
     </div>
 
-    <!-- رسالة الترحيب -->
-    <div class="welcome-section">
-        <p>مرحباً بكم في عالمي المرجاني! 👋</p>
-    </div>
+    <!-- شريط حقوق الملكية -->
+    <footer class="copyright-bar">
+        <div class="copyright-content">
+            <div class="copyright-right">
+                <span class="ar">Mr.MRJAooN - المرجاني</span>
+                <span class="en" style="display: none;">Mr.MRJAooN - Al-Marjani</span>
+            </div>
+            <div class="copyright-left">
+                <span class="ar">جميع الحقوق محفوظة 2025</span>
+                <span class="en" style="display: none;">All Rights Reserved 2025</span>
+            </div>
+        </div>
+    </footer>
 
-    <!-- السكربتات -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/home.js"></script>
 </body>
 </html>
