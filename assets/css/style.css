@@ -285,13 +285,13 @@ body {
 /* تحديث روابط التواصل الاجتماعي */
 .social-links {
     position: fixed;
-    left: 0;
+    left: -40px;
     top: 50%;
-    transform: translateY(-50%) translateX(-100%);
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    z-index: 1001;
+    z-index: 9999;
     background: rgba(44, 62, 80, 0.9);
     padding: 0.5rem;
     border-radius: 0 15px 15px 0;
@@ -299,7 +299,7 @@ body {
 }
 
 .social-links:hover {
-    transform: translateY(-50%) translateX(0);
+    transform: translateY(-50%) translateX(40px);
 }
 
 .social-link {
