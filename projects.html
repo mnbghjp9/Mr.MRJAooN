@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المشاريع | Mr.MRJAooN المرجاني</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <button id="music-toggle" class="music-btn">
+        <i class="fas fa-music"></i>
+    </button>
+    <audio id="background-music" loop>
+        <source src="assets/audio/background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <header data-aos="fade-down">
+        <div class="header-content">
+            <h1>Mr.MRJAooN</h1>
+            <div class="subtitle">المــــــــــــــــــــــــــــــــــرجــــــــــــــــــــــــــــاني</div>
+            <p class="profession">معرض المشاريع</p>
+        </div>
+    </header>
+
+    <nav class="main-nav" data-aos="fade">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                <li><a href="projects.html" class="nav-link active">المشاريع</a></li>
+                <li><a href="articles.html" class="nav-link">المقالات</a></li>
+                <li><a href="videos.html" class="nav-link">الفيديوهات</a></li>
+                <li><a href="contact.html" class="nav-link">اتصل بي</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- قائمة التصفية -->
+        <div class="filters" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="desktop">برامج سطح المكتب</button>
+            <button class="filter-btn" data-filter="web">تطبيقات الويب</button>
+            <button class="filter-btn" data-filter="mobile">تطبيقات الموبايل</button>
+            <button class="filter-btn" data-filter="ai">الذكاء الاصطناعي</button>
+        </div>
+
+        <!-- شبكة المشاريع -->
+        <div class="projects-grid">
+            <!-- مشروع 1 -->
+            <div class="project-card" data-category="desktop" data-aos="fade-up">
+                <div class="project-image">
+                    <img src="assets/images/projects/project1.jpg" alt="مشروع 1">
+                    <div class="project-overlay">
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>PyQt</span>
+                            <span>SQLite</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>برنامج إدارة المهام</h3>
+                    <p>تطبيق سطح مكتب لإدارة المهام والمشاريع بواجهة مستخدم حديثة</p>
+                    <div class="project-links">
+                        <a href="#" class="btn demo-btn"><i class="fas fa-play"></i> عرض تجريبي</a>
+                        <a href="#" class="btn code-btn"><i class="fas fa-code"></i> الكود المصدري</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- مشروع 2 -->
+            <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image">
+                    <img src="assets/images/projects/project2.jpg" alt="مشروع 2">
+                    <div class="project-overlay">
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>نظام التعرف على الوجوه</h3>
+                    <p>نظام ذكي للتعرف على الوجوه باستخدام تقنيات الذكاء الاصطناعي</p>
+                    <div class="project-links">
+                        <a href="#" class="btn demo-btn"><i class="fas fa-play"></i> عرض تجريبي</a>
+                        <a href="#" class="btn code-btn"><i class="fas fa-code"></i> الكود المصدري</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- مشروع 3 -->
+            <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <img src="assets/images/projects/project3.jpg" alt="مشروع 3">
+                    <div class="project-overlay">
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>منصة تعليمية</h3>
+                    <p>منصة تعليمية متكاملة للتعلم عن بعد مع نظام إدارة المحتوى</p>
+                    <div class="project-links">
+                        <a href="#" class="btn demo-btn"><i class="fas fa-play"></i> عرض تجريبي</a>
+                        <a href="#" class="btn code-btn"><i class="fas fa-code"></i> الكود المصدري</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="social-links">
+        <a href="https://wa.me/YOUR_NUMBER" class="social-link whatsapp" target="_blank" data-aos="fade-left" data-aos-delay="100">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://t.me/YOUR_USERNAME" class="social-link telegram" target="_blank" data-aos="fade-left" data-aos-delay="200">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://facebook.com/YOUR_USERNAME" class="social-link facebook" target="_blank" data-aos="fade-left" data-aos-delay="300">
+            <i class="fab fa-facebook"></i>
+        </a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/projects.js"></script>
+</body>
+</html>

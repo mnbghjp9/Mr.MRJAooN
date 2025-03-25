@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.MRJAooN | المرجاني</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <!-- زر الموسيقى -->
+    <button id="music-toggle" class="music-btn">
+        <i class="fas fa-music"></i>
+    </button>
+    <audio id="background-music" loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- الهيدر -->
+    <header data-aos="fade-down">
+        <div class="header-content">
+            <h1>Mr.MRJAooN</h1>
+            <div class="subtitle">المــــــــــــــــــــــــــــــــــرجــــــــــــــــــــــــــــاني</div>
+            <p class="profession">خبير برمجيات وأمن سيبراني</p>
+        </div>
+    </header>
+
+    <!-- القائمة الرئيسية -->
+    <nav class="main-nav" data-aos="fade">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                <li><a href="projects.html" class="nav-link">المشاريع</a></li>
+                <li><a href="articles.html" class="nav-link">المقالات</a></li>
+                <li><a href="videos.html" class="nav-link">الفيديوهات</a></li>
+                <li><a href="contact.html" class="nav-link">اتصل بي</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- الأقسام الرئيسية -->
+    <main class="main-content">
+        <div class="categories-section" data-aos="fade-up">
+            <h2 class="section-title">الأقسام الرئيسية</h2>
+            <div class="categories-grid">
+                <a href="computer-programs.html" class="category-card" data-aos="zoom-in">
+                    <i class="fas fa-desktop"></i>
+                    <h3>برامج الحاسوب</h3>
+                    <p>برامج وتطبيقات مميزة</p>
+                </a>
+                <a href="mobile-apps.html" class="category-card" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>تطبيقات الجوال</h3>
+                    <p>تطبيقات للأندرويد و iOS</p>
+                </a>
+                <a href="education.html" class="category-card" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>التعليم</h3>
+                    <p>دورات ودروس تعليمية</p>
+                </a>
+                <a href="tips.html" class="category-card" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>نصائح وحلول</h3>
+                    <p>نصائح تقنية وحلول برمجية</p>
+                </a>
+                <a href="animations.html" class="category-card" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-film"></i>
+                    <h3>الرسوم المتحركة</h3>
+                    <p>تصاميم وأنيميشن</p>
+                </a>
+                <a href="ai.html" class="category-card" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fas fa-robot"></i>
+                    <h3>الذكاء الاصطناعي</h3>
+                    <p>مشاريع وتطبيقات ذكية</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- روابط التواصل الاجتماعي -->
+    <div class="social-links">
+        <a href="https://wa.me/YOUR_NUMBER" class="social-link whatsapp" target="_blank" data-aos="fade-left" data-aos-delay="100">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://t.me/YOUR_USERNAME" class="social-link telegram" target="_blank" data-aos="fade-left" data-aos-delay="200">
+            <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://facebook.com/YOUR_USERNAME" class="social-link facebook" target="_blank" data-aos="fade-left" data-aos-delay="300">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://youtube.com/@YOUR_CHANNEL" class="social-link youtube" target="_blank" data-aos="fade-left" data-aos-delay="400">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+
+    <!-- رسالة الترحيب -->
+    <div class="welcome-section">
+        <p>مرحباً بكم في عالمي المرجاني! 👋</p>
+    </div>
+
+    <!-- السكربتات -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
