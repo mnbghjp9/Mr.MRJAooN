@@ -55,7 +55,17 @@ particlesJS("particles-js", {
 // إدارة الموسيقى
 const musicBtn = document.getElementById('music-toggle');
 const music = document.getElementById('background-music');
-let isPlaying = false;
+let isPlaying = true;
+
+// تشغيل الموسيقى تلقائياً عند تحميل الصفحة
+window.addEventListener('load', () => {
+    music.play().then(() => {
+        musicBtn.classList.add('playing');
+    }).catch((error) => {
+        console.log('لم نتمكن من التشغيل التلقائي:', error);
+        isPlaying = false;
+    });
+});
 
 musicBtn.addEventListener('click', () => {
     if (isPlaying) {
